@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+                 <meta charset="utf-8">
+                 <style>
+                 
+                 .node circle {
+                 fill: #fff;
+                 stroke: steelblue;
+                 stroke-width: 1.5px;
+                 }
+                 
+                 .node {
+                 font: 15px sans-serif;
+                 }
+                 
+                 .link {
+                 fill: none;
+                 stroke: #ccc;
+                 stroke-width: 1.5px;
+                 }
+                 
+                 </style>
+                 <body>
+               
+             <script src="http://d3js.org/d3.v3.min.js"></script>    
+				  <script type="application/json" id="data">{"name":"","children":[{"name":"","children":[{"name":"KIN001.135 Group  34","size":1,"group":34},{"name":"Parthenolide Group  45","size":1,"group":45}]},{"name":"","children":[{"name":"","children":[{"name":"Shikonin Group  17","size":1,"group":17},{"name":"TW.37 Group  10","size":1,"group":10}]},{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"JW.7.52.1 Group  43","size":1,"group":43},{"name":"Rapamycin Group  43","size":1,"group":43}]},{"name":"","children":[{"name":"A.443654 Group  2","size":1,"group":2},{"name":"","children":[{"name":"Paclitaxel Group  42","size":1,"group":42},{"name":"S.Trityl.L.cysteine Group  37","size":1,"group":37}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"Erlotinib Group  22","size":1,"group":22},{"name":"GNF.2 Group  11","size":1,"group":11}]},{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"FTI.277 Group  25","size":1,"group":25},{"name":"","children":[{"name":"Bryostatin Group  55","size":1,"group":55},{"name":"","children":[{"name":"Embelin Group  72","size":1,"group":72},{"name":"","children":[{"name":"AZD6244 Group  68","size":1,"group":68},{"name":"","children":[{"name":"","children":[{"name":"Bortezomib Group  57","size":1,"group":57},{"name":"MG.132 Group  57","size":1,"group":57}]},{"name":"","children":[{"name":"AZ628 Group  13","size":1,"group":13},{"name":"","children":[{"name":"FH535 Group  71","size":1,"group":71},{"name":"","children":[{"name":"SB590885 Group  13","size":1,"group":13},{"name":"","children":[{"name":"PLX4720 Group  13","size":1,"group":13},{"name":"","children":[{"name":"CI.1040 Group  40","size":1,"group":40},{"name":"","children":[{"name":"PD.0325901 Group  40","size":1,"group":40},{"name":"RDEA119 Group  40","size":1,"group":40}]}]}]}]}]}]}]}]}]}]}]},{"name":"","children":[{"name":"Bicalutamide Group  5","size":1,"group":5},{"name":"","children":[{"name":"GSK.1904529A Group  33","size":1,"group":33},{"name":"","children":[{"name":"","children":[{"name":"NSC.87877 Group  62","size":1,"group":62},{"name":"","children":[{"name":"JNK.9L Group  36","size":1,"group":36},{"name":"Vinorelbine Group  42","size":1,"group":42}]}]},{"name":"","children":[{"name":"SL.0101.1 Group  9","size":1,"group":9},{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"BIRB.0796 Group  36","size":1,"group":36},{"name":"GW.441756 Group  46","size":1,"group":46}]},{"name":"","children":[{"name":"AMG.706 Group  51","size":1,"group":51},{"name":"JNK.Inhibitor.VIII Group  36","size":1,"group":36}]}]},{"name":"","children":[{"name":"","children":[{"name":"BMS.708163 Group  29","size":1,"group":29},{"name":"CCT007093 Group  54","size":1,"group":54}]},{"name":"","children":[{"name":"RO.3306 Group  16","size":1,"group":16},{"name":"","children":[{"name":"AKT.inhibitor.VIII Group  2","size":1,"group":2},{"name":"","children":[{"name":"Epothilone.B Group  42","size":1,"group":42},{"name":"","children":[{"name":"Lapatinib Group  22","size":1,"group":22},{"name":"","children":[{"name":"Docetaxel Group  42","size":1,"group":42},{"name":"","children":[{"name":"BIBW2992 Group  22","size":1,"group":22},{"name":"Gefitinib Group  22","size":1,"group":22}]}]}]}]}]}]}]}]}]}]}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"AUY922 Group  32","size":1,"group":32},{"name":"Gemcitabine Group  20","size":1,"group":20}]},{"name":"","children":[{"name":"","children":[{"name":"Bleomycin Group  20","size":1,"group":20},{"name":"","children":[{"name":"AS601245 Group  36","size":1,"group":36},{"name":"","children":[{"name":"","children":[{"name":"Obatoclax.Mesylate Group  10","size":1,"group":10},{"name":"PAC.1 Group  15","size":1,"group":15}]},{"name":"","children":[{"name":"Tipifarnib Group  25","size":1,"group":25},{"name":"","children":[{"name":"","children":[{"name":"Doxorubicin Group  20","size":1,"group":20},{"name":"OSU.03012 Group  53","size":1,"group":53}]},{"name":"","children":[{"name":"GSK.650394 Group  61","size":1,"group":61},{"name":"QS11_IC Group  6","size":1,"group":6}]}]}]}]}]}]},{"name":"","children":[{"name":"CCT018159 Group  32","size":1,"group":32},{"name":"PF.562271 Group  24","size":1,"group":24}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"Thapsigargin Group  8","size":1,"group":8},{"name":"","children":[{"name":"BMS.509744 Group  35","size":1,"group":35},{"name":"","children":[{"name":"AG.014699 Group  50","size":1,"group":50},{"name":"","children":[{"name":"Elesclomol Group  32","size":1,"group":32},{"name":"","children":[{"name":"AZD.2281 Group  50","size":1,"group":50},{"name":"","children":[{"name":"","children":[{"name":"BMS.754807 Group  33","size":1,"group":33},{"name":"OSI.906 Group  33","size":1,"group":33}]},{"name":"","children":[{"name":"Camptothecin Group  68","size":1,"group":68},{"name":"Cisplatin Group  20","size":1,"group":20}]}]}]}]}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"ABT.888 Group  50","size":1,"group":50},{"name":"","children":[{"name":"SB.216763 Group  30","size":1,"group":30},{"name":"X681640 Group  18","size":1,"group":18}]}]},{"name":"","children":[{"name":"","children":[{"name":"EHT.1864 Group  58","size":1,"group":58},{"name":"PF.4708671 Group  48","size":1,"group":48}]},{"name":"","children":[{"name":"","children":[{"name":"CMK Group  9","size":1,"group":9,"group":9},{"name":"Z.LLNle.CHO Group  29","size":1,"group":29}]},{"name":"","children":[{"name":"","children":[{"name":"Pyrimethamine Group  19","size":1,"group":19},{"name":"","children":[{"name":"BI.2536 Group  53","size":1,"group":53},{"name":"GW843682X Group  53","size":1,"group":53}]}]},{"name":"","children":[{"name":"JNJ.26854165 Group  39","size":1,"group":39},{"name":"","children":[{"name":"","children":[{"name":"Nutlin.3a Group  39","size":1,"group":39},{"name":"","children":[{"name":"AZD6482 Group  44","size":1,"group":44},{"name":"","children":[{"name":"GDC0941 Group  44","size":1,"group":44},{"name":"MK.2206 Group  2","size":1,"group":2}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"Cytarabine Group  20","size":1,"group":20},{"name":"","children":[{"name":"PHA.665752 Group  41","size":1},{"name":"","children":[{"name":"Etoposide Group  68","size":1,"group":68},{"name":"Mitomycin.C Group  20","size":1,"group":20}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"Axitinib Group  38","size":1,"group":38},{"name":"","children":[{"name":"","children":[{"name":"BMS.536924 Group  33","size":1,"group":33},{"name":"","children":[{"name":"NVP.TAE684 Group  2","size":1,"group":2},{"name":"","children":[{"name":"AP.24534 Group  1","size":1,"group":1},{"name":"","children":[{"name":"Sorafenib Group  38","size":1,"group":38},{"name":"Sunitinib Group  38","size":1,"group":38}]}]}]}]},{"name":"","children":[{"name":"MS.275 Group  31","size":1,"group":31},{"name":"","children":[{"name":"Imatinib Group  1","size":1,"group":1},{"name":"PF.02341066 Group  41","size":1,"group":41}]}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"Temsirolimus Group  43","size":1,"group":43},{"name":"Vinblastine Group  42","size":1,"group":42}]},{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"AICAR_IC Group  4","size":1,"group":4},{"name":"","children":[{"name":"ATRA_IC Group  59","size":1,"group":59},{"name":"","children":[{"name":"AZD7762 Group  18","size":1,"group":18},{"name":"","children":[{"name":"","children":[{"name":"GDC.0449 Group  63","size":1,"group":63},{"name":"VX.702 Group  47","size":1}]},{"name":"","children":[{"name":"Lenalidomide Group  67","size":1,"group":67},{"name":"Nilotinib Group  1","size":1,"group":1}]}]}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"PD.173074 Group  22","size":1,"group":22},{"name":"","children":[{"name":"PD.0332991 Group  16","size":1,"group":16},{"name":"ZM.447439 Group  9","size":1,"group":9}]}]},{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"AZD8055 Group  43","size":1,"group":43},{"name":"CEP.701 Group  27","size":1,"group":27}]},{"name":"","children":[{"name":"ABT.263 Group  10","size":1,"group":10},{"name":"","children":[{"name":"Methotrexate Group  19","size":1,"group":19},{"name":"Vorinostat Group  31","size":1,"group":31}]}]}]},{"name":"","children":[{"name":"VX.680 Group  27","size":1,"group":27},{"name":"","children":[{"name":"BX.795 Group  9","size":1,"group":9},{"name":"Cyclopamine Group  63","size":1,"group":63}]}]}]}]}]},{"name":"","children":[{"name":"NU.7441 Group  21","size":1,"group":21},{"name":"","children":[{"name":"Bosutinib Group  1","size":1,"group":1},{"name":"KU.55933 Group  7","size":1,"group":7}]}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"BAY.61.3606 Group  65","size":1,"group":65},{"name":"IPA.3 Group  49","size":1,"group":49}]},{"name":"","children":[{"name":"Roscovitine Group  16","size":1,"group":16},{"name":"","children":[{"name":"","children":[{"name":"Salubrinal Group  28","size":1,"group":28},{"name":"","children":[{"name":"CGP.082996 Group  16","size":1,"group":16},{"name":"XMD8.85 Group  23","size":1,"group":23}]}]},{"name":"","children":[{"name":"DMOG Group  56","size":1,"group":56},{"name":"LAQ824 Group  31","size":1,"group":31}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]},{"name":"","children":[{"name":"","children":[{"name":"NVP.BEZ235 Group  44","size":1,"group":44},{"name":"","children":[{"name":"Bexarotene Group  59","size":1,"group":59},{"name":"LFM.A13 Group  14","size":1,"group":14}]}]},{"name":"","children":[{"name":"CGP.60474 Group  16","size":1,"group":16},{"name":"","children":[{"name":"","children":[{"name":"","children":[{"name":"GSK269962A Group  60","size":1,"group":60},{"name":"TGX221 Group  44","size":1,"group":44}]},{"name":"","children":[{"name":"CHIR.99021 Group  30","size":1,"group":30},{"name":"","children":[{"name":"X17.AAG Group  32","size":1,"group":32},{"name":"","children":[{"name":"Midostaurin Group  38","size":1,"group":38},{"name":"Pazopanib Group  38","size":1}]}]}]}]},{"name":"","children":[{"name":"WZ.1.84 Group  12","size":1,"group":12},{"name":"","children":[{"name":"WH.4.023 Group  1","size":1,"group":1},{"name":"","children":[{"name":"A.770041 Group  64","size":1,"group":64},{"name":"","children":[{"name":"AZD.0530 Group  1","size":1,"group":1},{"name":"Dasatinib Group  1","size":1,"group":1}]}]}]}]}]}]}]}]}]}]}]}]}]}</script>
+                   
+                   
+                   
+                   <script>
+                   
+                   
+				   var color = d3.scale.category20()
+	.domain(["1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
+	,"21","22","23","24","25","26","27","28","29","30"
+	,"31","32","33","34","35","36","37","38","39","40"
+	,"41","42","43","44","45","46","47","48","49","50"
+	,"51","52","53","54","55","56","57","58","59","60"
+	,"61","62","63","64","65","66","67","68","69","70","71","72"
+	])			   
+	.range(["#DDA9DD", 	"#0000FF",	"#9ACD32",	"#EE82EE",  "#00CED1", 	// 5
+			"#B0E0E9",	"#FF0000",  "#40E0D0",  "#FF8C00",	"#6A5ACD",	//10
+			"#00CED1",	"#D8BFD8",  "#663399",	"#008080",	"#008B8B",  //15
+			"#D2B48C",	"#4682B4",	"#00FF7F",  "#BC8F8F",	"#708090", 	//20
+			"#FFC0CB",	"#CD853F",	"#4169E1",	"#FF7F50",	"#DC143C",	//25
+			"#DB7093",	"#AFEEEE",	"#8B4513", 	"#dd7e1a",	"#D2691E",	//30
+			"#DA70D6",	"#FF4500",	"#FFA500",  "#FA8072", 	"#6B8E23",	//35
+			"#808000",	"#000080",	"#F4A460",  "#C71585",  "#7FFF00", 	//40
+			"#48D1CC",	"#00FA9A",	"#7B68EE",	"#2E8B57",	"#3CB371",	//45
+			"#BA55D3",	"#800000",	"#FF00FF",	"#A0522D",	"#32CD32",	//50
+			"#00FF00",	"#B0C4DE",	"#00FFFF",	"#C0C0C0", 	"#000000",	//55
+			"#0000FF",	"#A52A2A",  "#DEB887", 	"#5F9EA0", 	"#ff6f69",  //60
+			"#68452c",  "#009B77", 	"#C3447A",	"#c83349", 	"#f2e394",  //65
+			"#ffcc5c",  "#e06377", 	"#484f4f", 	"#bccad6", 	"#77a8a8",   //70
+			"#622569",	"#80ced6"	]);
+				   
+				   
+				   
+				   
+				   
+				   
+				   var data = document.getElementById('data').innerHTML;
+                   root = JSON.parse(data);
+                   
+                   
+                   var width = 6000,
+                   height = 6000;
+                   
+				   var radius = 960 / 1.5;
+				   
+                   var cluster = d3.layout.cluster()
+					.size([360, radius - 120]);
+
+                   
+                   var diagonal = d3.svg.diagonal.radial()
+    .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
+                   
+                   var svg = d3.select("body").append("svg")
+    .attr("width", radius * 3)
+    .attr("height", radius * 4)
+  .append("g")
+    .attr("transform", "translate(" + radius * 1.5 + "," + radius * 1.5 + ")");
+                   
+                   
+                   var nodes = cluster.nodes(root),
+                   links = cluster.links(nodes);
+                   
+                     var link = svg.selectAll("path.link")
+      .data(cluster.links(nodes))
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", diagonal);
+                   
+                   var node = svg.selectAll("g.node")
+      .data(nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+	  
+	  
+                   node.append("circle")
+                   .attr("r", 4.5);
+                   
+                     node.append("text")
+      .attr("dy", ".31em")
+      .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+      .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; })
+      .text(function(d) { return d.name; })
+      .attr("font-size", "8px")         
+      .style("fill", function(d) { return color(d.group); })         
+                   d3.select(self.frameElement).style("height", height + "px");
+                   
+                   </script>
