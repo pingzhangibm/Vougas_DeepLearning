@@ -1,4 +1,4 @@
-rules4<-read.csv("~/Projects/MBA/data/Genes_from_rules4_per_drug.tsv",sep='\t',colClasses = "character")
+rules4<-read.csv("~/Projects/MBA/new_data/paper_prep/data/Drugs_predictorGenes.tsv",sep='\t',colClasses = "character")
 
 
 drugStatus<-paste(rules4$Drug,rules4$Drug_Status,sep="=")
@@ -25,14 +25,14 @@ for (i in 1:ncol(comb)){
   m[comb[2,i],comb[1,i]]<-overlap
   rm(m.idx)
 }
-write.table(m,file="~/Projects/MBA/data/Predictor_Genes_Overlap_rules4.csv",sep='\t')
-save(m,file="~/Projects/MBA/data/Predictor_Genes_Overlap_rules4.RData")
+write.table(m,file="~/Projects/MBA/new_data/paper_prep/data/Predictor_Genes_Overlap_rules4.csv",sep='\t')
+save(m,file="~/Projects/MBA/new_data/paper_prep/data/Predictor_Genes_Overlap_rules4.RData")
 
 #####################################
 ####Calculate overlap probability####
 #####################################
-load("~/Projects/MBA/data/Predictor_Genes_Overlap_rules4.RData")
-rules4<-read.csv("~/Projects/MBA/data/Genes_from_rules4_per_drug.tsv",sep='\t',colClasses = "character")
+load("~/Projects/MBA/new_data/paper_prep/data/Predictor_Genes_Overlap_rules4.RData")
+rules4<-read.csv("~/Projects/MBA/new_data/paper_prep/data/Drugs_predictorGenes.tsv",sep='\t',colClasses = "character")
 drugStatus<-paste(rules4$Drug,rules4$Drug_Status,sep="=")
 comb<-combn(drugStatus,2)
 m.p<-matrix(NA,nrow=length(drugStatus),ncol=length(drugStatus),dimnames = list(drugStatus,drugStatus))
@@ -52,7 +52,7 @@ for (i in 1:ncol(comb)){
 print(i)
 drug1.gene.no<-m[comb[1,i],comb[1,i]]
 drug2.gene.no<-m[comb[2,i],comb[2,i]]
-for (f in 1:100){
+for (f in 1:50){
 rand.genes.drug1<-sample(all.genes.unique,drug1.gene.no,prob=all.genes.table)
 rand.genes.drug2<-sample(all.genes.unique,drug2.gene.no,prob=all.genes.table)
 m.idx<-match(rand.genes.drug1,rand.genes.drug2)
@@ -68,6 +68,6 @@ if (m[comb[2,i],comb[1,i]]>=mean(overlap)) {
 
 }
 
-write.table(m.p,file="~/Projects/MBA/data/Predictor_Genes_Overlap_rules4_p_values.csv",sep='\t')
-save(m.p,file="~/Projects/MBA/data/Predictor_Genes_Overlap_rules4_p_values.RData")
+write.table(m.p,file="~/Projects/MBA/new_data/paper_prep/data/Predictor_Genes_Overlap_rules4_p_values.csv",sep='\t')
+save(m.p,file="~/Projects/MBA/new_data/paper_prep/data/Predictor_Genes_Overlap_rules4_p_values.RData")
 
